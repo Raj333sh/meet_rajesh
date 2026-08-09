@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+:root {
+  font-size: 14px;
+  --bg: #050816;
+  --bg-secondary: #0f172a;
+  --surface: #111827;
+  --surface-light: #1e293b;
+
+  --primary: #38bdf8;
+  --primary-dark: #0284c7;
+  --accent: #8b5cf6;
+
+  --text: #ffffff;
+  --text-secondary: #94a3b8;
+
+  --border: rgba(255,255,255,.08);
+
+  --container: 1280px;
+  --content-max: 1600px;
+  --section-x: clamp(20px, 3vw, 48px);
+  --section-y: clamp(28px, 3vw, 40px);
+  --eyebrow-size: 12px;
+  --body-size: 14px;
+  --body-leading: 1.55;
+  --section-title-size: 24px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  font-size: 14px;
+  line-height: var(--body-leading);
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4,h5{
+  font-family:"Poppins",sans-serif;
+}
+
+.orbitron{
+  font-family:"Orbitron",sans-serif;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  cursor:pointer;
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+.animate-gradient {
+  animation: gradientMove 6s linear infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   Portfolio design system
+   Keeps typography, spacing and content widths consistent across sections.
+   -------------------------------------------------------------------------- */
+.site-section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+
+.site-container {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--section-x);
+}
+
+.site-eyebrow {
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--eyebrow-size);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.site-section-title {
+  margin: .55rem 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--section-title-size);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.site-copy {
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
+  color: var(--text-secondary);
+}
+
+.site-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 14px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .01em;
+  transition: .25s ease;
+}
+
+.site-button--primary {
+  border-color: transparent;
+  background: #28d7ff;
+  color: #04101a;
+}
+
+.site-button--primary:hover {
+  background: #55e0ff;
+  box-shadow: 0 0 24px rgba(40,215,255,.2);
+}
+
+.site-button--ghost:hover {
+  border-color: rgba(40,215,255,.5);
+  color: #55e0ff;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --section-x: 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  :root {
+    --section-x: 18px;
+    --section-y: 26px;
+    --section-title-size: 21px;
+  }
+
+  html, body, #root {
+    min-width: 0;
+  }
+}
+
+/* Career timeline: reserve a dedicated rail so text always clears the line. */
+.career-timeline-item {
+  position: relative;
+  padding-left: 5rem;
+}
+
+@media (min-width: 640px) {
+  .career-timeline-item {
+    padding-left: 6rem;
+  }
+}
