@@ -5,6 +5,8 @@ import {
   Code2,
 } from "lucide-react";
 
+const base = import.meta.env.BASE_URL;
+
 const projects = [
   {
     id: 1,
@@ -15,7 +17,7 @@ const projects = [
       "Designed and developed a grid-tie inverter system for solar applications.",
     icon: Cpu,
     accent: "cyan",
-    image: "/grid-tie-inverter.jpg",
+    image: `${base}images/projects/grid-tie-inverter.jpg`,
   },
 
   {
@@ -27,7 +29,7 @@ const projects = [
       "Built a working compressed air vehicle as part of an academic project.",
     icon: Factory,
     accent: "cyan",
-    image: "/compressed-air-vehicle.jpg",
+    image: `${base}images/projects/compressed-air-vehicle.jpg`,
   },
 
   {
@@ -39,7 +41,7 @@ const projects = [
       "End-to-end procurement activities managed for multiple industrial projects.",
     icon: ShoppingCart,
     accent: "orange",
-    image: "/industrial-procurement.jpg",
+    image: `${base}images/projects/industrial-procurement.jpg`,
   },
 
   {
@@ -51,7 +53,7 @@ const projects = [
       "Managed tenders, auctions and vendor workflows across procurement platforms.",
     icon: ShoppingCart,
     accent: "orange",
-    image: "/gem-sap-ariba.jpg",
+    image: `${base}images/projects/gem-sap-ariba.jpg`,
   },
 
   {
@@ -63,7 +65,7 @@ const projects = [
       "Built this portfolio using HTML, CSS, JavaScript and React.",
     icon: Code2,
     accent: "cyan",
-    image: "/portfolio-website.png",
+    image: `${base}images/projects/portfolio-website.png`,
   },
 
   {
@@ -75,7 +77,7 @@ const projects = [
       "Built this Estimation using HTML, CSS, JavaScript.",
     icon: Code2,
     accent: "cyan",
-    image: "/steel-estimate-cum-invoce-maker.png",
+    image: `${base}images/projects/steel-estimate-cum-invoce-maker.png`,
   },
 ];
 

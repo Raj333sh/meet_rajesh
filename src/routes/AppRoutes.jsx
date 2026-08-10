@@ -6,7 +6,7 @@ import NotFound from "../pages/NotFound.jsx";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/meet_rajesh">
       <Routes>
         <Route element={<MainLayout />}>
            <Route path="/" element={<Home />} />

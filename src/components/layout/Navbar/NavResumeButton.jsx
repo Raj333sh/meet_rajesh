@@ -1,9 +1,11 @@
 import { Download } from "lucide-react";
 
+const resumeUrl = `${import.meta.env.BASE_URL}Rajesh-Mishra-Resume.pdf`;
+
 const ResumeButton = () => {
   return (
     <a
-      href="/Rajesh-Mishra-Resume.pdf"
+      href={resumeUrl}
       download="Rajesh-Mishra-Resume.pdf"
       className="
         group
