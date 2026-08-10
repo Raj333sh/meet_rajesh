@@ -23,7 +23,7 @@ const AboutText = () => {
       </p>
 
       <a
-        href="#travel"
+        href="#stories"
         className="mt-5 rounded border border-white/25 px-4 py-2 text-[15px] text-white transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-400 hover:text-black"
       >
         Read My Story
