@@ -10,16 +10,37 @@ const ResumeButton = () => {
       className="
         group
         inline-flex
+        shrink-0
         items-center
+        justify-center
         gap-2
         rounded-md
         border
         border-white/15
         bg-transparent
-        px-4
-        py-2
+
+        min-h-[44px]
+        px-7
+        py-3
+
+        sm:min-h-[46px]
+        sm:px-8
+        sm:py-3.5
+
+        md:min-h-[48px]
+        md:px-9
+        md:py-4
+
+        lg:min-h-[50px]
+        lg:px-10
+        lg:py-4
+
+        xl:px-11
+        xl:py-4.5
+
         text-[15px]
         font-medium
+        leading-none
         text-white
         backdrop-blur-md
         transition-all

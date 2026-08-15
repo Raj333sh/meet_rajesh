@@ -160,18 +160,25 @@ const Stories = () => {
   onClick={openStories}
   className="
     mt-5
+    inline-flex
+    min-h-[40px]
+    shrink-0
+    items-center
+    justify-center
     rounded-[3px]
     border
     border-white/20
     bg-transparent
-    px-3
-    py-1.5
-    text-[15px]
+    px-5
+    py-2.5
+    text-[13px]
     text-white
     transition-all
     duration-300
     hover:border-cyan-400/50
     hover:text-cyan-300
+
+    sm:text-sm
   "
 >
   Read All Stories

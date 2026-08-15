@@ -34,6 +34,13 @@
 
 html{
   scroll-behavior:smooth;
+  /* Always reserve the vertical scrollbar's width, whether or not
+     the page is currently scrollable. Without this, elements sized
+     against the viewport (like a sticky/fixed navbar) can measure
+     a few pixels wider than the actual content column once a
+     scrollbar appears, leaving a gap on the right on Windows/Chrome
+     (classic, space-reserving scrollbars). */
+  scrollbar-gutter: stable;
 }
 
 html,
@@ -142,15 +149,47 @@ select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 30px;
-  padding: 0 14px;
+
+  min-height: 44px;
+  padding: 12px 24px;
+
   border: 1px solid rgba(255,255,255,.16);
   border-radius: 4px;
+
   font-size: 12px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: .01em;
+
   transition: .25s ease;
+}
+
+@media (min-width: 640px) {
+  .site-button {
+    min-height: 46px;
+    padding: 12px 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-button {
+    min-height: 48px;
+    padding: 13px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-button {
+    min-height: 50px;
+    padding: 14px 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .site-button {
+    min-height: 50px;
+    padding: 14px 34px;
+  }
 }
 
 .site-button--primary {

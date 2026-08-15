@@ -8,8 +8,8 @@ const HeroRings = () => {
           key={size}
           className="absolute rounded-full border border-cyan-400/15"
           style={{
-            width: size,
-            height: size,
+            width: `min(${size}px, 92vw)`,
+            height: `min(${size}px, 92vw)`,
           }}
         />
       ))}

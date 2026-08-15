@@ -175,9 +175,15 @@ const StoryModal = ({
                   onSelectStory(null)
                 }
                 className="
-                  flex
+                  -ml-3
+                  inline-flex
+                  min-h-[40px]
+                  shrink-0
                   items-center
                   gap-2
+                  rounded-md
+                  px-3
+                  py-2
                   text-[14px]
                   text-slate-400
                   transition
@@ -424,9 +430,15 @@ const StoryModal = ({
                     disabled={!previousStory}
                     onClick={handlePrevious}
                     className="
-                      flex
+                      -ml-3
+                      inline-flex
+                      min-h-[40px]
+                      shrink-0
                       items-center
                       gap-2
+                      rounded-md
+                      px-3
+                      py-2
                       text-[14px]
                       text-slate-400
                       transition
@@ -444,9 +456,15 @@ const StoryModal = ({
                     disabled={!nextStory}
                     onClick={handleNext}
                     className="
-                      flex
+                      -mr-3
+                      inline-flex
+                      min-h-[40px]
+                      shrink-0
                       items-center
                       gap-2
+                      rounded-md
+                      px-3
+                      py-2
                       text-[14px]
                       text-slate-400
                       transition

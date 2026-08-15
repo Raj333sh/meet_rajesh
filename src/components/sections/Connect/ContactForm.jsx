@@ -97,16 +97,38 @@ const ContactForm = () => {
         className="
           mt-3
           inline-flex
+          shrink-0
           items-center
+          justify-center
           gap-2
           rounded-md
           bg-cyan-400
-          px-4
-          py-2
+
+          min-h-[44px]
+          px-7
+          py-3
+
+          sm:min-h-[46px]
+          sm:px-8
+          sm:py-3.5
+
+          md:min-h-[48px]
+          md:px-9
+          md:py-4
+
+          lg:min-h-[50px]
+          lg:px-10
+          lg:py-4
+
+          xl:px-11
+          xl:py-4.5
+
           text-[15px]
           font-semibold
+          leading-none
           text-[#04101A]
-          transition
+          transition-all
+          duration-300
           hover:bg-cyan-300
           hover:shadow-[0_0_25px_rgba(40,215,255,0.25)]
         "

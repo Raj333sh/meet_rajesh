@@ -40,9 +40,38 @@ const Navbar = () => {
         duration: 0.35,
         ease: "easeOut",
       }}
-      className="fixed left-0 top-0 z-50 w-full"
+      className="sticky top-0 z-50 w-full"
     >
-      <div className="mx-auto mt-6 flex max-w-full items-center justify-between rounded-none border border-white/10 bg-[#0A1323]/70 px-8 py-4 backdrop-blur-xl">
+      <div
+        className="
+          mx-auto
+          flex
+          max-w-full
+          items-center
+          justify-between
+          rounded-none
+          border
+          border-white/10
+          bg-[#0A1323]/70
+          backdrop-blur-xl
+
+          mt-3
+          px-5
+          py-3
+
+          sm:mt-4
+          sm:px-6
+          sm:py-3.5
+
+          md:px-8
+
+          lg:mt-6
+          lg:px-12
+          lg:py-4
+
+          xl:px-16
+        "
+      >
         <NavLogo />
 
         <NavMenu />

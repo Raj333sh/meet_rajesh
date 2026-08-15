@@ -7,7 +7,7 @@ const HeroSocial = () => {
       className="
         absolute
         left-6
-        top-80
+        top-100
         z-40
         hidden
         -translate-y-1/2

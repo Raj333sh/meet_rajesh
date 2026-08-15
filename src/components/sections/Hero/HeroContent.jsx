@@ -3,30 +3,63 @@ import HeroButtons from "./HeroButtons";
 
 const HeroContent = () => {
   return (
-    <div className="flex w-full max-w-[560px] flex-col">
-      
-      <span className="
-        inline-flex
-        rounded-full
-        px-5
-        py-2
-        text-sm
-        tracking-[0.35em]
-        text-white
-      ">
+    <div
+      className="
+        flex
+        w-full
+        max-w-[560px]
+        flex-col
+
+        lg:max-w-[560px]
+      "
+    >
+      {/* GREETING */}
+      <span
+        className="
+          inline-flex
+          w-fit
+          px-1
+          py-1
+
+          text-[13px]
+          tracking-[0.12em]
+          text-white
+
+          sm:text-sm
+          sm:tracking-[0.2em]
+
+          lg:text-sm
+          lg:tracking-[0.35em]
+        "
+      >
         Hello, I'm
       </span>
 
-      <h1 className="
-        mt-5
-        font-black
-        leading-[0.9]
-        tracking-[-4px]
-        text-[7rem]
-        xl:text-[8rem]
-      ">
+      {/* NAME */}
+      <h1
+        className="
+          mt-3
+          font-black
+          leading-[0.88]
+          tracking-[-2px]
+          text-[2.8rem]
+
+          sm:mt-4
+          sm:text-[3.8rem]
+          sm:tracking-[-3px]
+
+          md:text-[5rem]
+
+          lg:mt-5
+          lg:text-[7rem]
+          lg:tracking-[-4px]
+
+          xl:text-[8rem]
+        "
+      >
         RAJESH
         <br />
+
         <span
           className="
             bg-size-[200%_200%]
@@ -43,8 +76,23 @@ const HeroContent = () => {
         </span>
       </h1>
 
-      {/* Typewriter wrapper */}
-      <div className="mt-10 min-h-[2rem] text-lg font-medium text-white">
+      {/* TYPEWRITER */}
+      <div
+        className="
+          mt-5
+          min-h-[2.5rem]
+          text-[13px]
+          font-medium
+          leading-5
+          text-white
+
+          sm:mt-6
+          sm:text-sm
+
+          lg:mt-10
+          lg:text-lg
+        "
+      >
         <Typewriter
           words={[
             "Mechanical Engineer",
@@ -61,24 +109,42 @@ const HeroContent = () => {
         />
       </div>
 
-      {/* Paragraph */}
-      <p className="
-        mt-8
-        min-h-[4rem]
-        max-w-xl
-        text-lg
-        leading-6
-        text-gray-500
-      ">
+      {/* DESCRIPTION */}
+      <p
+        className="
+          mt-4
+          min-h-0
+          max-w-[310px]
+          text-[12px]
+          leading-[1.55]
+          text-gray-400
+
+          sm:mt-5
+          sm:max-w-[360px]
+          sm:text-[13px]
+
+          lg:mt-8
+          lg:max-w-xl
+          lg:text-lg
+          lg:leading-6
+        "
+      >
         I love understanding how things are built, how systems work, and
         how technology can make everything better.
       </p>
 
-      {/* Buttons */}
-      <div className="mt-12">
+      {/* BUTTONS */}
+      <div
+        className="
+          mt-6
+
+          sm:mt-7
+
+          lg:mt-12
+        "
+      >
         <HeroButtons />
       </div>
-
     </div>
   );
 };

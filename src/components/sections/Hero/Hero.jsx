@@ -10,95 +10,112 @@ const Hero = () => {
     <section
       id="home"
       className="
-        relative
-        min-h-screen
-        overflow-hidden
-        pt-16
-        lg:pt-20
+         relative
+    min-h-screen
+    overflow-hidden
+
+    pt-6
+    sm:pt-8
       "
     >
-      {/* LEFT SOCIAL BAR */}
+      {/* DESKTOP SOCIAL BAR */}
       <HeroSocial />
 
-      {/* RIGHT CONTACT CARD */}
+      {/* CONTACT INFORMATION */}
       <FloatingContactBar />
 
-      {/* MAIN HERO */}
       <div
         className="
           mx-auto
           flex
-          min-h-[calc(100vh-112px)]
+          min-h-[80vh]
+          w-full
           max-w-[1600px]
-          items-center
-          justify-between
-          px-6
-          sm:px-8
+          flex-col
+
+          px-5
+          sm:px-6
+          md:px-8
+
+          lg:flex-row
+          lg:items-center
+          lg:justify-between
           lg:px-12
           xl:px-16
         "
       >
         {/* HERO CONTENT */}
-       <div
-          className="
-            relative
-            z-30
-            w-[44%]
-            lg:translate-x-[60px]
-            xl:translate-x-[80px]
-          "
-        >
-        <motion.div
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 1,
-            ease: "easeOut",
-          }}
-        >
-          <HeroContent />
-        </motion.div>
-        </div>
-        
-        {/* HERO IMAGE */}
-
         <div
           className="
             relative
-            flex
-            w-[56%]
+    z-30
+    order-1
+    w-full
+
+    lg:w-[44%]
+    lg:translate-x-[60px]
+
+    xl:translate-x-[80px]
+          "
+        >
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.9,
+              ease: "easeOut",
+            }}
+          >
+            <HeroContent />
+          </motion.div>
+        </div>
+
+        {/* DESKTOP HERO IMAGE */}
+        <div
+          className="
+            relative
+            z-10
+            order-2
+            hidden
+            w-full
             justify-center
+
+            lg:flex
+            lg:w-[56%]
             lg:-translate-x-[35px]
+
             xl:-translate-x-[50px]
           "
         >
-        <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 1,
-            delay: 0.3,
-            ease: "easeOut",
-          }}
-        >
-          <HeroImage />
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.2,
+              ease: "easeOut",
+            }}
+          >
+            <HeroImage />
+          </motion.div>
         </div>
-        
-        {/* MOBILE IMAGE */}
 
+        {/* MOBILE HERO IMAGE */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.8,
-            delay: 0.3,
+            delay: 0.2,
           }}
           className="
             relative
+            z-10
+            order-2
             flex
             w-full
             justify-center
+
             lg:hidden
           "
         >

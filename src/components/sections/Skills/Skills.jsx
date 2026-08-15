@@ -109,6 +109,7 @@ const Skills = () => {
               grid
               grid-cols-2
               gap-y-7
+              sm:grid-cols-2
               md:grid-cols-4
               md:gap-y-0
             "

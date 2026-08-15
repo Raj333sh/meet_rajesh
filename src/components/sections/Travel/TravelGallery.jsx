@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { travelPhotos } from "./travel.data";
+import TravelPhoto from "./TravelPhoto";
 
 const TravelGallery = () => {
   return (
@@ -17,7 +18,7 @@ const TravelGallery = () => {
       </div>
 
       {/* GALLERY */}
-      <div className="grid grid-cols-5 gap-1.5">
+      <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 md:grid-cols-5">
         {travelPhotos.map((photo, index) => (
           <motion.div
             key={photo.id}
@@ -47,46 +48,8 @@ const TravelGallery = () => {
               delay: index * 0.05,
             }}
           >
-            {/* OPTIMIZED IMAGE */}
-            <picture>
-              <source
-                srcSet={photo.src.replace(
-                  /\.(jpg|jpeg)$/i,
-                  ".avif"
-                )}
-                type="image/avif"
-              />
-
-              <source
-                srcSet={photo.src.replace(
-                  /\.(jpg|jpeg)$/i,
-                  ".webp"
-                )}
-                type="image/webp"
-              />
-
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-                decoding="async"
-                fetchPriority="low"
-                width="400"
-                height="350"
-                className="
-                  h-full
-                  w-full
-                  object-cover
-                  opacity-80
-                  grayscale-[15%]
-                  transition
-                  duration-500
-                  group-hover:scale-110
-                  group-hover:opacity-100
-                  group-hover:grayscale-0
-                "
-              />
-            </picture>
+            {/* OPTIMIZED, LAZY-MOUNTED IMAGE */}
+            <TravelPhoto photo={photo} className="absolute inset-0" />
 
             {/* IMAGE OVERLAY */}
             <div

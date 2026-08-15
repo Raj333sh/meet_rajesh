@@ -11,7 +11,23 @@ import OrbitDots from "./hologram/OrbitDots";
 
 const HeroImage = () => {
   return (
-    <div className="relative flex h-[700px] w-full items-center justify-center overflow-visible">
+    <div className="relative
+        flex
+        h-[390px]
+        w-full
+        max-w-[430px]
+        items-center
+        justify-center
+        overflow-visible
+
+        sm:h-[450px]
+        sm:max-w-[500px]
+
+        md:h-[560px]
+        md:max-w-[620px]
+
+        lg:h-[700px]
+        lg:max-w-none">
       <PulseGlow />
       
       <HeroGlow />

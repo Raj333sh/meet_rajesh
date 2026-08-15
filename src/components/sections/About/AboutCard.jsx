@@ -11,7 +11,20 @@ const AboutCard = ({
     <motion.article
       whileHover={{ y: -4 }}
       transition={{ duration: 0.25 }}
-      className="group relative flex min-h-[175px] flex-col items-center px-3 py-4 text-center sm:min-h-[180px] lg:min-h-[185px]"
+      className="group
+  relative
+  flex
+  min-h-[175px]
+  flex-col
+  items-center
+  px-2
+  py-5
+  text-center
+
+  sm:min-h-[185px]
+  sm:px-3
+
+  lg:min-h-[185px]"
     >
       {/* Icon */}
       <div
@@ -29,12 +42,30 @@ const AboutCard = ({
       </div>
 
       {/* Title */}
-      <h3 className="mt-3 max-w-[130px] text-[15px] font-semibold leading-[1.2] text-white">
+      <h3 className="mt-3
+    max-w-[130px]
+    text-[12px]
+    font-semibold
+    leading-[1.2]
+    text-white
+
+    sm:text-[13px]
+
+    lg:text-[15px]">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="mt-3 max-w-[155px] text-[15px] leading-[1.55] text-slate-400">
+      <p className="mt-3
+    max-w-[145px]
+    text-[11px]
+    leading-[1.45]
+    text-slate-400
+
+    sm:text-[12px]
+
+    lg:text-[15px]
+    lg:leading-[1.55]">
         {description}
       </p>
 
@@ -52,7 +83,14 @@ const AboutCard = ({
         />
 
         <div
-          className="mt-1 font-mono text-[15px] font-semibold"
+          className="mt-1
+    font-mono
+    text-[11px]
+    font-semibold
+
+    sm:text-xs
+
+    lg:text-[15px]"
           style={{ color }}
         >
           {year}
